@@ -52,3 +52,23 @@ Grid.prototype.draw = function() {
     }
     ct.restore();
 }
+Grid.prototype.sample1 = function () {
+    let self = this;
+    let ct = self.getCanvasCtx();
+    ct.save();
+    ct.strokeStyle = self.getStroke();
+    ct.fillStyle = self.getFill();
+    ct.beginPath();
+    ct.strokeStyle = '#fff';
+    ct.fillStyle = '#0f0';
+    ct.lineWidth = 2;
+    // start lines
+    ct.moveTo(50, 50);
+    ct.lineTo(150, 250);
+    ct.lineTo(250, 170);
+    ct.stroke();
+    ct.fillText("(50, 50)", 30, 40);
+    ct.fillText("(150, 250)", 130, 260);
+    ct.fillText("(250, 170)", 255, 175);
+    ct.restore();
+}
