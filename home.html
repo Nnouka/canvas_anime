@@ -13,6 +13,10 @@
 		<canvas id="asteroids" width="400" height="400"></canvas>
 		<canvas id="grid" width="400" height="400"></canvas>
 		<script type="text/javascript" src="./assets/js/draw/index.js"></script>
-		<script type="text/javascript" src="./assets/js/grid/index.js"></script>
+		<script type="text/javascript" src="./src/grid/Grid.js"></script>
+		<script type="text/javascript">
+			let grid = new Grid(document.getElementById("grid").getContext('2d'));
+			grid.draw();
+		</script>
 	</body>
 </html>
