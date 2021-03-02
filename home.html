@@ -12,13 +12,30 @@
 		<h1>Canvas</h1>
 		<canvas id="asteroids" width="400" height="400"></canvas>
 		<canvas id="grid" width="400" height="400"></canvas>
+		<canvas id="pacman" width="400" height="400"></canvas>
+		<canvas id="pacman-stroke" width="400" height="400"></canvas>
 		<script type="text/javascript" src="./assets/js/draw/index.js"></script>
 		<script type="text/javascript" src="./src/grid/Grid.js"></script>
+		<script type="text/javascript" src="./src/brush/Brush.js"></script>
+		<script type="text/javascript" src="./src/characters/pacman/PacMan.js"></script>
 		<script type="text/javascript">
 			let grid = new Grid(document.getElementById("grid").getContext('2d'));
 			grid.draw();
 			grid.sample1();
 			grid.sample2();
+			grid.sample3();
+		</script>
+		<script type="text/javascript">
+			let pacman = new PacMan(document.getElementById('pacman').getContext('2d'));
+			pacman.setFill('#ff0');
+			pacman.draw();
+		</script>
+		<script type="text/javascript">
+			let grid2 = new Grid(document.getElementById("pacman-stroke").getContext('2d'));
+			grid2.draw();
+			let pacman2 = new PacMan(document.getElementById('pacman-stroke').getContext('2d'));
+			pacman2.setStroke('#ff0');
+			pacman2.draw(false);
 		</script>
 	</body>
 </html>

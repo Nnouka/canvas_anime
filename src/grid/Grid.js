@@ -92,5 +92,30 @@ Grid.prototype = {
         ct.stroke();
         ct.fill();
         ct.restore();
+    },
+    sample3: function () {
+        let self = this;
+        let ct = self.getCanvasCtx();
+        ct.save();
+        ct.strokeStyle = self.getStroke();
+        ct.fillStyle = self.getFill();
+        ct.beginPath();
+        ct.moveTo(50, 250);
+        ct.quadraticCurveTo(25, 300, 50, 350);
+        ct.quadraticCurveTo(100, 375, 150, 350);
+        ct.closePath();
+        ct.moveTo(230, 360);
+        ct.quadraticCurveTo(255, 340, 270, 360);
+        ct.quadraticCurveTo(255, 340, 270, 310);
+        ct.closePath();
+        ct.moveTo(250, 50);
+        ct.quadraticCurveTo(310, 60, 370, 50);
+        ct.quadraticCurveTo(400, 75, 370, 100);
+        ct.closePath();
+        ct.strokeStyle = "#ff0";
+        ct.fillStyle = "#000";
+        ct.stroke();
+        ct.fill();
+        ct.restore();
     }
 }
