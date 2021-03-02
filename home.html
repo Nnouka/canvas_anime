@@ -34,8 +34,13 @@
 			let grid2 = new Grid(document.getElementById("pacman-stroke").getContext('2d'));
 			grid2.draw();
 			let pacman2 = new PacMan(document.getElementById('pacman-stroke').getContext('2d'));
+
 			pacman2.setStroke('#ff0');
-			pacman2.draw(false);
+			setInterval(
+					function () {
+						pacman2.animate();
+					}, 1000
+			)
 		</script>
 	</body>
 </html>
